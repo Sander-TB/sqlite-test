@@ -20,7 +20,6 @@ export async function getStaticPaths() {
 		const paths = games.map((game) => ({
 			params: { slug: game.slug },
 		}));
-		console.log(paths);
 		return { paths, fallback: false };
 	} catch (e) {
 		console.log(e);

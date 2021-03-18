@@ -1,6 +1,7 @@
 import Layout from "../components/Layout/Layout";
 import axios from "axios";
 import { BASE_URL } from "../constants/api";
+import Image from "next/image";
 
 export default function OldGames({ games }) {
 	return (
@@ -15,10 +16,11 @@ export default function OldGames({ games }) {
 									key={games}
 									href={`games/${game.slug}`}>
 									<h1>{game.name}</h1>
-									<img
+									<Image
 										src={game.image}
 										alt={game.name}
-										style={{ width: 500 }}
+										height={200}
+										width={200}
 									/>
 								</a>
 							</div>
