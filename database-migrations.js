@@ -9,11 +9,9 @@ async function setup() {
 		});
 
 		// run migrations to create the table in the DB
-		await db.migrate({
-			force: "last",
-		});
+		await db.migrate();
 	} catch (error) {
-		console.log(error);
+		console.error(error);
 	}
 }
 
